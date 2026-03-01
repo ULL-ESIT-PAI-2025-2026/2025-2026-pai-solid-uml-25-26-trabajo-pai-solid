@@ -36,12 +36,18 @@ interface MilitaryPersonnel {
   /**
    * Issues military orders.
    * Not every soldier has authority to do this.
+   * 
+   * @param order - The order to be given.
+   * @throws Error if the personnel does not have authority to give orders.
    */
   giveOrder(order: string): void;
 
   /**
    * Plans military missions.
    * Only commanding officers should perform this action.
+   * 
+   * @param missionName - The name of the mission to be planned.
+   * @throws Error if the personnel does not have authority to plan missions.
    */
   planMission(missionName: string): void;
 }
