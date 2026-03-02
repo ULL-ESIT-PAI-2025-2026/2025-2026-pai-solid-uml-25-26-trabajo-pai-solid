@@ -111,20 +111,8 @@ class StatisticsView {
    * @param results - An object containing all the calculated statistical values (mean, median, mode, max, min, standard deviation) to be displayed.
    * This method is responsible for presenting the results in a clear and organized manner, separating the presentation logic from the calculation logic.
    */
-  displayResults(results: {
-    mean: number;
-    median: number;
-    mode: number;
-    max: number;
-    min: number;
-    stdDev: number;
-  }): void {
-    console.log(`Mean: ${results.mean}`);
-    console.log(`Median: ${results.median}`);
-    console.log(`Mode: ${results.mode}`);
-    console.log(`Max: ${results.max}`);
-    console.log(`Min: ${results.min}`);
-    console.log(`Standard Deviation: ${results.stdDev}`);
+  displayResults(results: { statisticComputed: string, statisticCalculator: number}): void {
+    console.log(`${results.statisticComputed}: ${results.statisticCalculator}`);
   }
 }
 
@@ -133,18 +121,19 @@ class StatisticsView {
  */
 function mainGoodLayerImplementation(): void {
   const data = [1, 2, 2, 3, 4, 5, 5, 5, 6];
-
   const calculator = new StatisticsCalculator();
   const view = new StatisticsView();
 
-  view.displayResults({
-    mean: calculator.calculateMean(data),
-    median: calculator.calculateMedian(data),
-    mode: calculator.calculateMode(data),
-    max: calculator.calculateMax(data),
-    min: calculator.calculateMin(data),
-    stdDev: calculator.calculateStandardDeviation(data),
-  });
+  const results = [
+    { statisticComputed: 'Mean', statisticCalculator: calculator.calculateMean(data) },
+    { statisticComputed: 'Median', statisticCalculator: calculator.calculateMedian(data) },
+    { statisticComputed: 'Mode', statisticCalculator: calculator.calculateMode(data) },
+    { statisticComputed: 'Max', statisticCalculator: calculator.calculateMax(data) },
+    { statisticComputed: 'Min', statisticCalculator: calculator.calculateMin(data) },
+    { statisticComputed: 'Standard Deviation', statisticCalculator: calculator.calculateStandardDeviation(data) }
+  ];
+
+  results.forEach(result => view.displayResults(result));
 }
 
 mainGoodLayerImplementation();
