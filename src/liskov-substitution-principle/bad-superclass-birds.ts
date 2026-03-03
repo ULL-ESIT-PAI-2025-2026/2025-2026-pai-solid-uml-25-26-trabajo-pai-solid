@@ -13,28 +13,19 @@
  *  Principle (LSP)`, using different types of birds and their ability to fly.
  */
 
-'use strict';
-
 /**
  * Represents any type of bird.
  *
  * This class intentionally violates the Liskov Substitution Principle (LSP)
  * when extended by types that cannot fulfill the behavioral contract of `fly`.
  */
-class Bird {
-  /** 
-   * Name assigned to the bird. 
-   */
-  protected name: string;
-
+abstract class Bird {
   /**
-   * Creates a new Bird instance.
-   *
-   * @param name The name of the bird.
+   * @desc Return the name of the bird species.
+   * 
+   * This method was added for `research purposes`.
    */
-  constructor(name: string) {
-    this.name = name;
-  }
+  abstract birdName(): string;
 
   /**
    * Makes the bird fly.
@@ -42,9 +33,7 @@ class Bird {
    * Contract: After calling this method, the bird is expected to
    * successfully perform a flying action without throwing errors.
    */
-  fly(): void {
-    console.log(`${this.name} is flying in the blue sky.`);
-  }
+  abstract fly(): void;
 }
 
 /** 
@@ -54,12 +43,10 @@ class Bird {
  */
 class Canary extends Bird {
   /**
-   * Creates a new Canary instance.
-   *
-   * @param name The name of the canary.
-   */
-  constructor(name: string) {
-    super(name);
+   * @desc Return the name of the bird species (Canary).
+   */ 
+  override birdName(): string {
+    return 'Canary';
   }
 
   /**
@@ -68,7 +55,7 @@ class Canary extends Bird {
    * This implementation respects the contract defined in the base class.
    */
   override fly(): void {
-    console.log(`${this.name} the canary is flying in the blue sky`);
+    console.log(`The ${this.birdName()} is flying ...`);
   }
 }
 
@@ -80,30 +67,39 @@ class Canary extends Bird {
  */
 class Penguin extends Bird {
   /**
-   * Creates a new Penguin instance.
-   *
-   * @param name The name of the penguin.
-   */
-  constructor(name: string) {
-    super(name);
+   * @desc Return the name of the bird species (Penguin).
+   */ 
+  override birdName(): string {
+    return 'Penguin';
   }
-
+  
   /**
    * Attempts to make the penguin fly.
    *
    * @throws Error Always thrown because penguins cannot fly !!!.
    */
   override fly(): void {
-    throw new Error(`Oops, ${this.name} cannot fly!`);
+    throw new Error(`Oops, ${this.birdName()}s cannot fly!`);
   }
+}
+
+/**
+ * A bird is supose to fly over a hole.
+ * Unfortunatelly, Penguins Cannot fly !!!
+ * 
+ * @param bird Bird ready to fly through a hole.
+ */
+function flythroughHole(bird: Bird): void {
+  bird.fly();
+  console.log('Sweet, the bird could make it through'!!!);
 }
 
 /**
  * Usage example
  */
 function main(): void {
-  let bird: Bird = new Canary('Piolín');
-  bird.fly(); // No issue at all
-  bird = new Penguin('Skipper');
-  bird.fly(); // Error: Penguins cannot fly !!!
+  flythroughHole(new Canary());
+  flythroughHole(new Penguin()); // Error: Penguins cannot fly !!!
 }
+
+main();
