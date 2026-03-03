@@ -26,17 +26,17 @@ export class OakTree
     );
   }
 
-  public respondToEnvironment(factor: string): void {
+  respondToEnvironment(factor: string): void {
     console.log(
       `${this.scientificName} responds to ${factor}.`,
     );
   }
 
-  public reproduce(): void {
+  reproduce(): void {
     console.log(`${this.scientificName} reproduces via acorns.`);
   }
 
-  public germinate(): void {
+  germinate(): void {
     console.log(`${this.scientificName} germinates from an acorn.`);
   }
 }

@@ -21,24 +21,24 @@ import { LivingBeing } from './living-being';
  * Contiene lógica común a todos los seres vivos.
  */
 export abstract class LivingBeingBase implements LivingBeing {
-  public age = 0;
+  age = 0;
 
   protected alive = true;
 
   constructor(
-    public readonly id: string,
-    public readonly scientificName: string,
+    readonly id: string,
+    readonly scientificName: string,
   ) { }
 
-  public grow(): void {
+  grow(): void {
     this.age += 1;
   }
 
-  public abstract nourish(): void;
+  abstract nourish(): void;
 
-  public abstract reproduce(): void;
+  abstract reproduce(): void;
 
-  public isAlive(): boolean {
+  isAlive(): boolean {
     return this.alive;
   }
 

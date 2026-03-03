@@ -41,14 +41,14 @@ export class Dog extends AnimalBase implements Walkable {
   /**
    * Implementación específica del caminar.
    */
-  public walk(): void {
+  walk(): void {
     console.log(`${this.scientificName} walks on four legs.`);
   }
 
   /**
    * Reproducción específica de mamíferos.
    */
-  public reproduce(): void {
+  reproduce(): void {
     console.log(`${this.scientificName} reproduces viviparously.`);
   }
 }

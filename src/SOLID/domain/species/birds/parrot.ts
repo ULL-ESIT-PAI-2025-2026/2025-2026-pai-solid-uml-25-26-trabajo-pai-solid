@@ -23,15 +23,15 @@ export class Parrot
     );
   }
 
-  public walk(): void {
+  walk(): void {
     console.log(`${this.scientificName} walks using its claws.`);
   }
 
-  public fly(): void {
+  fly(): void {
     console.log(`${this.scientificName} flies through the air.`);
   }
 
-  public reproduce(): void {
+  reproduce(): void {
     console.log(`${this.scientificName} lays eggs.`);
   }
 }

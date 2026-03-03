@@ -37,11 +37,11 @@ export class Trout
     );
   }
 
-  public swim(): void {
+  swim(): void {
     console.log(`${this.scientificName} swims upstream.`);
   }
 
-  public reproduce(): void {
+  reproduce(): void {
     console.log(`${this.scientificName} reproduces by spawning.`);
   }
 }

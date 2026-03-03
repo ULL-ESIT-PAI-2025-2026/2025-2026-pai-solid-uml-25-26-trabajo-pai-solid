@@ -41,7 +41,7 @@ export abstract class PlantBase extends LivingBeingBase implements Plant {
   /**
    * Represents the nutrition process of the plant. For plants, this involves photosynthesis, which is how they convert light energy into chemical energy to nourish themselves.
    */
-  public nourish(): void {
+  nourish(): void {
     this.photosynthesize();
   }
 
@@ -49,7 +49,7 @@ export abstract class PlantBase extends LivingBeingBase implements Plant {
    * Represents the photosynthesis process of the plant. This is how the plant nourishes itself by converting light energy into chemical energy. 
    * The specific implementation of how the plant performs photosynthesis is left to the concrete classes that extend this base class.
    */
-  public photosynthesize(): void {
+  photosynthesize(): void {
     console.log(`${this.scientificName} performs photosynthesis.`);
   }
 
@@ -57,5 +57,5 @@ export abstract class PlantBase extends LivingBeingBase implements Plant {
    * Represents the reproduction process of the plant. 
    * The specific implementation of how the plant reproduces is left to the concrete classes that extend this base class.
    */
-  public abstract reproduce(): void;
+  abstract reproduce(): void;
 }

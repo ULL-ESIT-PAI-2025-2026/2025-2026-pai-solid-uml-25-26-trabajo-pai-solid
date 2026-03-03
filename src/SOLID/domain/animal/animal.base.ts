@@ -42,7 +42,7 @@ export abstract class AnimalBase extends LivingBeingBase implements Animal {
   /**
    * Represents the movement behavior of the animal.
    */
-  public move(): void {
+  move(): void {
     console.log(`${this.scientificName} moves.`);
   }
 
@@ -51,7 +51,7 @@ export abstract class AnimalBase extends LivingBeingBase implements Animal {
    * 
    * @param stimulus - A string representing the stimulus to which the animal will react. This could be anything from a sound, a sight, a smell, etc.
    */
-  public reactToStimulus(stimulus: string): void {
+  reactToStimulus(stimulus: string): void {
     console.log(
       `${this.scientificName} reacts to ${stimulus}`,
     );
@@ -60,12 +60,12 @@ export abstract class AnimalBase extends LivingBeingBase implements Animal {
   /**
    * Represents the nutrition process of the animal. This could involve consuming food, absorbing nutrients, etc.
    */
-  public nourish(): void {
+  nourish(): void {
     console.log(`${this.scientificName} consumes food.`);
   }
 
   /**
    * Represents the reproduction process of the animal. The specific implementation of how the animal reproduces is left to the concrete classes that extend this base class.
    */
-  public abstract reproduce(): void;
+  abstract reproduce(): void;
 }
