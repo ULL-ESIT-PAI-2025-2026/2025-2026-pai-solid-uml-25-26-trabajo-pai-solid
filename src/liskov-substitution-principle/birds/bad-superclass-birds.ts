@@ -7,7 +7,7 @@
  * @author Álvaro Pérez Ramos
  * @author Pablo García de los Reyes
  * @author Adrián Hernández Herrera
- * @since 01 MAR 2026
+ * @since 03 MAR 2026
  *
  * Program that demonstrates an incorrect compliance of the `Liskov Substitution
  *  Principle (LSP)`, using different types of birds and their ability to fly.
