@@ -117,7 +117,9 @@ class Eagle extends Animal implements Walkable, Flyable {
 function mainGoodISP(): void {
   const swimmers: Swimmable[] = [new Dog("Rex"), new Fish("Nemo")];
 
-  swimmers.forEach(s => s.swim());
+  swimmers.forEach(swimingAnimal => {
+    swimingAnimal.swim();
+  });
 }
 
 mainGoodISP();

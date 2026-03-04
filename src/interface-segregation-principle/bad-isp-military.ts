@@ -111,7 +111,22 @@ function mainBadISPMilitary(): void {
     new Captain()
   ];
 
-  personnel.forEach(p => p.reportStatus());
+  personnel.forEach(militaryPerson => {
+    militaryPerson.patrol('Sector 7');
+    militaryPerson.reportStatus();
+
+    try {
+      militaryPerson.giveOrder('Advance to position.');
+    } catch (error) {
+      console.error(error.message);
+    }
+
+    try {
+      militaryPerson.planMission('Operation Dawn');
+    } catch (error) {
+      console.error(error.message);
+    }
+  });
 }
 
 mainBadISPMilitary();
