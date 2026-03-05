@@ -1,0 +1,38 @@
+classDiagram
+
+class AnimalClassification {
+ skeleton
+ animalClass
+}
+
+class PlantClassification {
+ plantGroup
+}
+
+class SkeletonType {
+ <<enumeration>>
+ vertebrate
+ invertebrate
+}
+
+class AnimalClass {
+ <<enumeration>>
+ mammal
+ bird
+ fish
+ reptile
+ amphibian
+}
+
+class PlantGroup {
+ <<enumeration>>
+ angiosperm
+ gymnosperm
+ fern
+ moss
+ algae
+}
+
+AnimalClassification --> SkeletonType
+AnimalClassification --> AnimalClass
+PlantClassification --> PlantGroup

@@ -1,0 +1,232 @@
+classDiagram
+
+%% =====================
+%% CORE INTERFACES
+%% =====================
+
+class LivingBeing {
+ <<interface>>
+ +id: string
+ +scientificName: string
+ +age: number
+ +grow(): void
+ +nourish(): void
+ +reproduce(): void
+ +isAlive(): boolean
+}
+
+%% =====================
+%% BASE IMPLEMENTATION
+%% =====================
+
+class LivingBeingBase {
+ <<abstract>>
+ -alive: boolean
+ +id: string
+ +scientificName: string
+ +age: number
+ +grow(): void
+ +isAlive(): boolean
+ #die(): void
+}
+
+LivingBeing <|.. LivingBeingBase
+
+
+%% =====================
+%% KINGDOM BASE CLASSES
+%% =====================
+
+class AnimalBase {
+ <<abstract>>
+ -classification: AnimalClassification
+ +move(): void
+ +reactToStimulus(stimulus: string): void
+ +nourish(): void
+ +reproduce(): void
+}
+
+class PlantBase {
+ <<abstract>>
+ -classification: PlantClassification
+ +photosynthesize(): void
+ +nourish(): void
+ +reproduce(): void
+}
+
+LivingBeingBase <|-- AnimalBase
+LivingBeingBase <|-- PlantBase
+
+
+%% =====================
+%% SPECIES
+%% =====================
+
+class Dog {
+ +walk(): void
+ +reproduce(): void
+}
+
+class Parrot {
+ +walk(): void
+ +fly(): void
+ +reproduce(): void
+}
+
+class Trout {
+ +swim(): void
+ +reproduce(): void
+}
+
+class OakTree {
+ +photosynthesize(): void
+ +respondToEnvironment(factor: string): void
+ +reproduce(): void
+}
+
+AnimalBase <|-- Dog
+AnimalBase <|-- Parrot
+AnimalBase <|-- Trout
+
+PlantBase <|-- OakTree
+
+
+%% =====================
+%% BEHAVIOUR INTERFACES
+%% =====================
+
+class Walkable {
+ <<interface>>
+ +walk(): void
+}
+
+class Flyable {
+ <<interface>>
+ +fly(): void
+}
+
+class Swimmable {
+ <<interface>>
+ +swim(): void
+}
+
+class Photosynthetic {
+ <<interface>>
+ +photosynthesize(): void
+}
+
+class TropismResponsive {
+ <<interface>>
+ +respondToEnvironment(factor: string): void
+}
+
+Dog ..|> Walkable
+Parrot ..|> Walkable
+Parrot ..|> Flyable
+Trout ..|> Swimmable
+
+OakTree ..|> Photosynthetic
+OakTree ..|> TropismResponsive
+
+
+%% =====================
+%% CLASSIFICATION OBJECTS
+%% =====================
+
+class AnimalClassification {
+ +kingdom: string
+ +group: string
+ +type: string
+ +skeleton: SkeletonType
+ +animalClass: AnimalClass
+}
+
+class PlantClassification {
+ +kingdom: string
+ +group: string
+ +type: string
+ +plantGroup: PlantGroup
+ +producesFlowers: boolean
+}
+
+AnimalBase --> AnimalClassification
+PlantBase --> PlantClassification
+
+
+%% =====================
+%% ENUM TYPES
+%% =====================
+
+class SkeletonType {
+ <<enumeration>>
+ vertebrate
+ invertebrate
+}
+
+class AnimalClass {
+ <<enumeration>>
+ mammal
+ bird
+ fish
+ reptile
+ amphibian
+ insect
+ arachnid
+}
+
+class PlantGroup {
+ <<enumeration>>
+ angiosperm
+ gymnosperm
+ fern
+ moss
+ algae
+}
+
+AnimalClassification --> SkeletonType
+AnimalClassification --> AnimalClass
+PlantClassification --> PlantGroup
+
+
+%% =====================
+%% ECOSYSTEM MODEL
+%% =====================
+
+class Ecosystem {
+ +name: string
+}
+
+Ecosystem "1" --> "0..*" LivingBeing : contains
+
+
+%% =====================
+%% SOCIAL RELATIONSHIP
+%% =====================
+
+Dog "1" --> "0..*" Dog : interactsWith
+
+
+%% =====================
+%% ORGAN COMPOSITION
+%% =====================
+
+class Organ
+
+class Heart
+class Brain
+
+Organ <|-- Heart
+Organ <|-- Brain
+
+AnimalBase "1" *-- "1" Heart
+AnimalBase "1" *-- "1" Brain
+
+
+%% =====================
+%% ECOLOGICAL INTERACTIONS
+%% =====================
+
+Parrot --> Trout : hunts
+Dog --> Environment : interacts
+
+class Environment

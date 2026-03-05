@@ -1,37 +1,25 @@
 classDiagram
 
 class LivingBeing {
-  <<interface>>
-  +grow()
-  +reproduce()
+ <<interface>>
 }
 
 class LivingBeingBase {
-  <<abstract>>
-  -id: string
-  -scientificName: string
-  +grow()
+ <<abstract>>
 }
 
-class AnimalBase {
-  <<abstract>>
-  +move()
-  +nourish()
-}
+LivingBeing <|.. LivingBeingBase
 
-class PlantBase {
-  <<abstract>>
-  +photosynthesize()
-}
+class AnimalBase
+class PlantBase
+
+LivingBeingBase <|-- AnimalBase
+LivingBeingBase <|-- PlantBase
 
 class Dog
 class Parrot
 class Trout
 class OakTree
-
-LivingBeing <|.. LivingBeingBase
-LivingBeingBase <|-- AnimalBase
-LivingBeingBase <|-- PlantBase
 
 AnimalBase <|-- Dog
 AnimalBase <|-- Parrot

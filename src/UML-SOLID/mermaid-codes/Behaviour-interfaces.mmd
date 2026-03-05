@@ -1,23 +1,28 @@
 classDiagram
 
 class Walkable {
-  <<interface>>
-  +walk()
+ <<interface>>
+ walk()
 }
 
 class Flyable {
-  <<interface>>
-  +fly()
+ <<interface>>
+ fly()
 }
 
 class Swimmable {
-  <<interface>>
-  +swim()
+ <<interface>>
+ swim()
 }
 
 class Photosynthetic {
-  <<interface>>
-  +photosynthesize()
+ <<interface>>
+ photosynthesize()
+}
+
+class TropismResponsive {
+ <<interface>>
+ respondToEnvironment()
 }
 
 class Dog
@@ -29,4 +34,6 @@ Dog ..|> Walkable
 Parrot ..|> Walkable
 Parrot ..|> Flyable
 Trout ..|> Swimmable
+
 OakTree ..|> Photosynthetic
+OakTree ..|> TropismResponsive
