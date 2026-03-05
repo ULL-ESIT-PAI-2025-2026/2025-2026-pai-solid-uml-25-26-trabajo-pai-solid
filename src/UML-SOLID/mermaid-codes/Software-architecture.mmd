@@ -1,0 +1,40 @@
+classDiagram
+
+class LivingBeing {
+  <<interface>>
+  +grow()
+  +reproduce()
+}
+
+class LivingBeingBase {
+  <<abstract>>
+  -id: string
+  -scientificName: string
+  +grow()
+}
+
+class AnimalBase {
+  <<abstract>>
+  +move()
+  +nourish()
+}
+
+class PlantBase {
+  <<abstract>>
+  +photosynthesize()
+}
+
+class Dog
+class Parrot
+class Trout
+class OakTree
+
+LivingBeing <|.. LivingBeingBase
+LivingBeingBase <|-- AnimalBase
+LivingBeingBase <|-- PlantBase
+
+AnimalBase <|-- Dog
+AnimalBase <|-- Parrot
+AnimalBase <|-- Trout
+
+PlantBase <|-- OakTree

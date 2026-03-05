@@ -1,0 +1,32 @@
+classDiagram
+
+class Walkable {
+  <<interface>>
+  +walk()
+}
+
+class Flyable {
+  <<interface>>
+  +fly()
+}
+
+class Swimmable {
+  <<interface>>
+  +swim()
+}
+
+class Photosynthetic {
+  <<interface>>
+  +photosynthesize()
+}
+
+class Dog
+class Parrot
+class Trout
+class OakTree
+
+Dog ..|> Walkable
+Parrot ..|> Walkable
+Parrot ..|> Flyable
+Trout ..|> Swimmable
+OakTree ..|> Photosynthetic

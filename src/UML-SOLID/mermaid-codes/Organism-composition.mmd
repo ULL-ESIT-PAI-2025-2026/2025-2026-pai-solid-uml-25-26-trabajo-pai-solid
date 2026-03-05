@@ -1,0 +1,12 @@
+classDiagram
+
+class AnimalBase
+class Organ
+class Heart
+class Brain
+
+Organ <|-- Heart
+Organ <|-- Brain
+
+AnimalBase "1" *-- "1" Heart
+AnimalBase "1" *-- "1" Brain

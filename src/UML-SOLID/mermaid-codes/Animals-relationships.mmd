@@ -1,0 +1,10 @@
+classDiagram
+
+class AnimalBase
+class Fish
+class Bird
+
+AnimalBase <|-- Fish
+AnimalBase <|-- Bird
+
+Bird "1" --> "0..*" Fish : hunts

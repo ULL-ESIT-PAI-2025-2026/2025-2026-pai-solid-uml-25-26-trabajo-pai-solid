@@ -1,0 +1,13 @@
+classDiagram
+
+class Ecosystem {
+  +name: string
+}
+
+class LivingBeing {
+  <<interface>>
+  +grow()
+  +reproduce()
+}
+
+Ecosystem "1" --> "0..*" LivingBeing : contains

@@ -1,0 +1,12 @@
+classDiagram
+
+class AnimalBase
+class PlantBase
+class Pollinator
+class Herbivore
+
+AnimalBase <|-- Pollinator
+AnimalBase <|-- Herbivore
+
+Pollinator --> PlantBase : pollinates
+Herbivore --> PlantBase : eats
