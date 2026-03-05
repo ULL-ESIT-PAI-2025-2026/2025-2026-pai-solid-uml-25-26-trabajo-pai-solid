@@ -21,7 +21,7 @@ interface Shape {
   /**
    * Calculates the area of the shape.
    * 
-   * * @returns The area of the Shape.
+   * @returns The area of the Shape.
    */
   getArea(): number;
 }
@@ -101,3 +101,4 @@ class Square implements Shape {
     return this.side * this.side;
   }
 }
+

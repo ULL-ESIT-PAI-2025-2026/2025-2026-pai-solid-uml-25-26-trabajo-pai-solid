@@ -104,11 +104,11 @@ function flythroughHole(bird: FlyingBird): void {
 /**
  * Usage example
  */
-function main(): void {
+function mainGoodSuperclass(): void {
   birdWatcher(new Canary());
   birdWatcher(new Penguin);
   flythroughHole(new Canary());
   // flythroughHole(new Penguin()); // Penguin wont match the class type !!!
 }
 
-main();
+mainGoodSuperclass();
