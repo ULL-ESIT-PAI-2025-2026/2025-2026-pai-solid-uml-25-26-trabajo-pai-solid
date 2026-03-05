@@ -92,3 +92,25 @@ export class Square extends Rectangle {
     this.height = height;
   }
 }
+
+/**
+ * This funtion will try to make several modifications
+ * to the object and then return its area.
+ * 
+ * @param rectangle Rectangle to be used.
+ */
+function magicalArea(rectangle: Rectangle): number {
+  rectangle.setWidth(5);
+  rectangle.setHeight(4);
+  return rectangle.getArea(); 
+}
+
+/**
+ * Usage example
+ */
+function mainInvariantViolation() {
+  const height: number = 2;
+  const width: number = 2;
+  console.log(new Rectangle(width, height)); // 20
+  console.log(new Square(width));            // 16 !!!!
+}

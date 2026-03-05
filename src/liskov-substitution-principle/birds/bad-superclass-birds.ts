@@ -97,9 +97,9 @@ function flythroughHole(bird: Bird): void {
 /**
  * Usage example
  */
-function main(): void {
+function mainBadSuperclass(): void {
   flythroughHole(new Canary());
   flythroughHole(new Penguin()); // Error: Penguins cannot fly !!!
 }
 
-main();
+mainBadSuperclass();

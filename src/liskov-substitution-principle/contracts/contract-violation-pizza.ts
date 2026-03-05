@@ -46,14 +46,13 @@ class GordonRamsayPizzeria extends RegularPizzeria {
    * @returns A string representing your cooked pizza.
    */
   override orderPizza(money: number): string {
-  
     /** 
      * Precondition violation:
      * The parent accepts 10 bucks. 
      * This child yells at you and demands 100 bucks just to look at you.
      * A system bringing 15 bucks (trusting the Parent) will crash in tears.
      */
-    if (money < 100) {
+    if (money <= 100) {
       throw new Error('Get out of my kitchen! I only accept 100 bucks or more!');
     }
     return 'Gourmet Truffle Pizza';
@@ -71,7 +70,7 @@ class ScamPizzeria extends RegularPizzeria {
    */
   override orderPizza(money: number): string {
     // Respects the parent's precondition
-    if (money < 10) {
+    if (money <= 10) {
       throw new Error('Not enough money! A pizza costs 10 bucks.');
     }
     
@@ -80,6 +79,6 @@ class ScamPizzeria extends RegularPizzeria {
      * The Parent promised to ALWAYS return a baked, edible pizza.
      * This child takes your money and hands you an empty box.
      */
-    return null as any;
+    return null as any; // Never use Any !!!
   }
 }
