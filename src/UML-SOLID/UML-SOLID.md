@@ -1,3 +1,15 @@
+<!-- 
+Universidad de La Laguna
+Escuela Superior de Ingeniería y Tecnología
+Grado en Ingeniería Informática
+Asignatura: Programación de Aplicaciones Interactivas (PAI)
+
+@author Álvaro Pérez Ramos
+@author Pablo García de los Reyes
+@author Adrián Hernández Herrera
+@since 26 FEB 2026
+-->
+
 # UML representation of Living Beings taxonomy
 
 This document presents the UML class diagrams used to model the architecture and biological domain of the project.
