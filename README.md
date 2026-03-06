@@ -1,19 +1,32 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/wSC2rRgA)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=22879874&assignment_repo_type=AssignmentRepo)
-## PAI class Presentation Template 
-### To be used for works to be exposed in class sessions
+# SOLID Principles & UML Diagrams 📐
 
-This directory is organised as follows:
+**Universidad de La Laguna** **Escuela Superior de Ingeniería y Tecnología** **Grado en Ingeniería Informática** **Asignatura:** Programación de Aplicaciones Interactivas (PAI)  
 
-      .
-      ├── bib          # Presentation bibliography and references
-      ├── slides       # slides of your presentation
-      ├── src          # Source code (add subdirectories if necessary) 
-      
-When you receive the link to this repository, clone it and use it to host all the material for the work to be done: slides, code, etc.
+**Authors:** 
+* Álvaro Pérez Ramos  
+* Pablo García de los Reyes  
+* Adrián Hernández Herrera  
 
-Upload the link to this public repository to the class assignment. This is required for the evaluation of the work.
+---
 
-Post the link to the repository in the PAI forum before the presentation date of the work, so that all students have access to the material in the exposition session.
+## 📖 About This Project
 
-Remove from the repository those directories that are not necessary for your work.
+This repository contains the practical code examples, theoretical explanations, and architectural designs used for our class presentation on the **SOLID Principles** of Object-Oriented Design. 
+
+The main focus of our project is to demonstrate how to write clean, maintainable, and scalable code by avoiding bad practices (like "Shotgun Surgery" or "Hardcoded Dependencies"). 
+
+
+While our core presentation dives deep into specific patterns, this repository covers the theoretical foundation of all five principles:
+
+1. **(S) Single Responsibility Principle (SRP):** A class should have one, and only one, reason to change. It should encapsulate a single, well-defined responsibility.
+2. **(O) Open/Closed Principle (OCP):** Software entities (classes, modules, functions) should be open for extension but closed for modification.
+3. **(L) Liskov Substitution Principle (LSP):** Objects of a superclass shall be replaceable with objects of its subclasses without breaking the application.
+4. **(I) Interface Segregation Principle (ISP):** Clients should not be forced to depend upon interfaces that they do not use. Large interfaces should be split into smaller, more specific ones.
+5. **(D) Dependency Inversion Principle (DIP):** High-level modules should not depend on low-level modules. Both should depend on abstractions (interfaces). Abstractions should not depend on details.
+6. **UML Diagrams:** A rapid explanation of how to use Mermaid, design UML diagrams and different ways to relate a class to another.
+
+## 🗂️ Contents
+
+* **Theoretical Concepts:** Explanations of core concepts such as Coupling, Dependency Injection, Polymorphism, and common code smells. All adapted to SOLID principles and the context of TypeScript.
+* **Code Examples (`Bad` vs. `Good`):** TypeScript files comparing bad implementations (violating the principles) side-by-side with their refactored, fully compliant versions.
+* **UML Diagrams:** Visual representations mapping our code architecture after applying the SOLID principles to clearly show the structural improvements.
