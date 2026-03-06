@@ -29,7 +29,7 @@ class RegularPizzeria {
    * @returns A string representing your cooked pizza.
    */
   orderPizza(money: number): string {
-    if (money < 10) {
+    if (money <= 10) {
       throw new Error('Not enough money! A pizza costs 10 bucks.'); 
     }
     return 'Delicious Hot Pizza'; 
