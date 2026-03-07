@@ -22,7 +22,7 @@ class RegularPizzeria {
    * Orders a pizza based on the money provided.
    *
    * Contract rules:
-   * - Precondition: You must pay at least 10 bucks.
+   * - Precondition: You must pay at least 10 euros.
    * - Postcondition: You `always` get a baked, edible pizza string.
    *
    * @param money The amount of money you pay.
@@ -30,7 +30,7 @@ class RegularPizzeria {
    */
   orderPizza(money: number): string {
     if (money <= 10) {
-      throw new Error('Not enough money! A pizza costs 10 bucks.'); 
+      throw new Error('Not enough money! A pizza costs 10 euros.'); 
     }
     return 'Delicious Hot Pizza'; 
   }
@@ -48,12 +48,12 @@ class GordonRamsayPizzeria extends RegularPizzeria {
   override orderPizza(money: number): string {
     /** 
      * Precondition violation:
-     * The parent accepts 10 bucks. 
-     * This child yells at you and demands 100 bucks just to look at you.
-     * A system bringing 15 bucks (trusting the Parent) will crash in tears.
+     * The parent accepts 10 euros. 
+     * This child yells at you and demands 100 euros just to look at you.
+     * A system bringing 15 euros (trusting the Parent) will crash in tears.
      */
     if (money <= 100) {
-      throw new Error('Get out of my kitchen! I only accept 100 bucks or more!');
+      throw new Error('Get out of my kitchen! I only accept 100 euros or more!');
     }
     return 'Gourmet Truffle Pizza';
   }
@@ -71,7 +71,7 @@ class ScamPizzeria extends RegularPizzeria {
   override orderPizza(money: number): string {
     // Respects the parent's precondition
     if (money <= 10) {
-      throw new Error('Not enough money! A pizza costs 10 bucks.');
+      throw new Error('Not enough money! A pizza costs 10 euros.');
     }
     
     /**  

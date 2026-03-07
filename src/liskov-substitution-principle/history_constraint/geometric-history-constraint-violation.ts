@@ -13,14 +13,11 @@
  * using different types of geometric figures.
  */
 
-/**
- * Represents a rectangle.
- */
+/** @desc Represents a rectangle. */
 export class Rectangle {
   
   /**
    * The class will be built around its width an height.
-   * 
    * @param width Width of the rectangle.
    * @param height Height of the rectangle.
    */
@@ -28,36 +25,26 @@ export class Rectangle {
   
   /**
    * A standar setter for the attribute `width`.
-   * 
    * @param width Width of the rectangle.
    */
-  setWidth(width: number): void {
-    this.width = width;
-  }
+  setWidth(width: number): void { this.width = width; }
   
   /**
    * A standar setter for the attribute `height`.
-   * 
    * @param height Height of the rectangle.
    */
-  setHeight(height: number): void {
-    this.height = height;
-  }
+  setHeight(height: number): void { this.height = height; }
   
   /**
    * This is a really simple function, but be aware: 
    * Something unexpected will happend shordly !!
-   * 
    * @returns The area of the Rectangle.
    */
-  getArea(): number {
-    return this.width * this.height;
-  }
+  getArea(): number { return this.width * this.height; }
 }
 
 /**
  * Represents a square
- * 
  * This class wont follow the invariants defined by its supperclass,
  * leading to an unexpected behaviour.
  */
@@ -65,7 +52,6 @@ export class Square extends Rectangle {
   
   /**
    * We only need one side to determine the dimensions of a square
-   * 
    * @param side Width/Height of the Square
    */
   constructor(side: number) {
@@ -74,7 +60,6 @@ export class Square extends Rectangle {
   
   /**
    * We must fix both sides of the Square (invariant violation)
-   * 
    * @param width Width of the Square
    */
   override setWidth(width: number): void {
@@ -84,7 +69,6 @@ export class Square extends Rectangle {
   
   /**
    * We must fix both sides of the Square (invariant violation)
-   * 
    * @param side Height of the Square
    */
   override setHeight(height: number): void {
@@ -96,7 +80,6 @@ export class Square extends Rectangle {
 /**
  * This funtion will try to make several modifications
  * to the object and then return its area.
- * 
  * @param rectangle Rectangle to be used.
  */
 function magicalArea(rectangle: Rectangle): number {
@@ -105,12 +88,9 @@ function magicalArea(rectangle: Rectangle): number {
   return rectangle.getArea(); 
 }
 
-/**
- * Usage example
- */
+/** @desc Usage example */
 function mainInvariantViolation() {
-  const height: number = 2;
-  const width: number = 2;
-  console.log(new Rectangle(width, height)); // 20
-  console.log(new Square(width));            // 16 !!!!
+  const side: number = 2;
+  console.log(magicalArea(new Rectangle(side, side))); // 20
+  console.log(magicalArea(new Square(side)));          // 16 !!!!
 }

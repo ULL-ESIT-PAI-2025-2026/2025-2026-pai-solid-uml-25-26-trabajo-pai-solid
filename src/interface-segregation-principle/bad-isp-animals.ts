@@ -37,15 +37,15 @@ abstract class Animal {
 
 class Duck extends Animal {
   walk(): void {
-    console.log("Duck walking");
+    console.log('Duck walking');
   }
 
   fly(): void {
-    console.log("Duck flying");
+    console.log('Duck flying');
   }
 
   swim(): void {
-    console.log("Duck swimming");
+    console.log('Duck swimming');
   }
 }
 
@@ -55,15 +55,15 @@ class Duck extends Animal {
  */
 class Dog extends Animal {
   walk(): void {
-    console.log("Dog walking");
+    console.log('Dog walking');
   }
 
   fly(): void {
-    throw new Error("Dog cannot fly");
+    throw new Error('Dog cannot fly');
   }
 
   swim(): void {
-    console.log("Dog swimming (forced behavior)");
+    console.log('Dog swimming (forced behavior)');
   }
 }
 
@@ -73,15 +73,15 @@ class Dog extends Animal {
  */
 class Fish extends Animal {
   walk(): void {
-    throw new Error("Fish cannot walk");
+    throw new Error('Fish cannot walk');
   }
 
   fly(): void {
-    throw new Error("Fish cannot fly");
+    throw new Error('Fish cannot fly');
   }
 
   swim(): void {
-    console.log("Fish swimming");
+    console.log('Fish swimming');
   }
 }
 

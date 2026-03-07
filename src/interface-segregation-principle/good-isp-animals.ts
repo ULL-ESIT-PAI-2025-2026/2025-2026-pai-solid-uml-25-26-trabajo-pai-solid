@@ -48,19 +48,19 @@ interface Swimmable {
  */
 class Duck extends Animal implements Walkable, Flyable, Swimmable {
   walk(): void {
-    console.log("Duck walking");
+    console.log('Duck walking');
   }
 
   fly(): void {
-    console.log("Duck flying");
+    console.log('Duck flying');
   }
 
   swim(): void {
-    console.log("Duck swimming");
+    console.log('Duck swimming');
   }
 
   describe(): string {
-    return "I am a duck";
+    return 'I am a duck';
   }
 }
 
@@ -69,15 +69,15 @@ class Duck extends Animal implements Walkable, Flyable, Swimmable {
  */
 class Dog extends Animal implements Walkable, Swimmable {
   walk(): void {
-    console.log("Dog walking");
+    console.log('Dog walking');
   }
 
   swim(): void {
-    console.log("Dog swimming");
+    console.log('Dog swimming');
   }
 
   describe(): string {
-    return "I am a dog";
+    return 'I am a dog';
   }
 }
 
@@ -86,11 +86,11 @@ class Dog extends Animal implements Walkable, Swimmable {
  */
 class Fish extends Animal implements Swimmable {
   swim(): void {
-    console.log("Fish swimming");
+    console.log('Fish swimming');
   }
 
   describe(): string {
-    return "I am a fish";
+    return 'I am a fish';
   }
 }
 
@@ -99,15 +99,15 @@ class Fish extends Animal implements Swimmable {
  */
 class Eagle extends Animal implements Walkable, Flyable {
   walk(): void {
-    console.log("Eagle walking");
+    console.log('Eagle walking');
   }
 
   fly(): void {
-    console.log("Eagle flying");
+    console.log('Eagle flying');
   }
 
   describe(): string {
-    return "I am an eagle";
+    return 'I am an eagle';
   }
 }
 
@@ -115,7 +115,7 @@ class Eagle extends Animal implements Walkable, Flyable {
  * Usage example.
  */
 function mainGoodISP(): void {
-  const swimmers: Swimmable[] = [new Dog("Rex"), new Fish("Nemo")];
+  const swimmers: Swimmable[] = [new Dog('Rex'), new Fish('Nemo')];
 
   swimmers.forEach(swimingAnimal => {
     swimingAnimal.swim();
