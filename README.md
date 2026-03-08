@@ -1,6 +1,9 @@
 # SOLID Principles & UML Diagrams 📐
 
-**Universidad de La Laguna** **Escuela Superior de Ingeniería y Tecnología** **Grado en Ingeniería Informática** **Asignatura:** Programación de Aplicaciones Interactivas (PAI)  
+**Universidad de La Laguna** 
+**Escuela Superior de Ingeniería y Tecnología** 
+**Grado en Ingeniería Informática** **Asignatura:** 
+Programación de Aplicaciones Interactivas (PAI)  
 
 **Authors:** 
 * Álvaro Pérez Ramos  
