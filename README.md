@@ -36,3 +36,7 @@ While our core presentation dives deep into specific patterns, this repository c
 * **Theoretical Concepts:** Explanations of core concepts such as Coupling, Dependency Injection, Polymorphism, and common code smells. All adapted to SOLID principles and the context of TypeScript.
 * **Code Examples (`Bad` vs. `Good`):** TypeScript files comparing bad implementations (violating the principles) side-by-side with their refactored, fully compliant versions.
 * **UML Diagrams:** Visual representations mapping our code architecture after applying the SOLID principles to clearly show the structural improvements.
+
+## Silides
+
+If you find it more convenient, you can access the [online version of our slides here](https://docs.google.com/presentation/d/10Qhd3diahVH43TqjAItQOeNdR9H3kT_ZT2SWuX4So3k/edit?usp=sharing) (you have to be logged in with your ULL account).
