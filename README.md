@@ -39,4 +39,4 @@ While our core presentation dives deep into specific patterns, this repository c
 
 ## Silides
 
-If you find it more convenient, you can access the [online version of our slides here](https://docs.google.com/presentation/d/10Qhd3diahVH43TqjAItQOeNdR9H3kT_ZT2SWuX4So3k/edit?usp=sharing) (you have to be logged in with your ULL account).
+[online version of our slides here](https://docs.google.com/presentation/d/10Qhd3diahVH43TqjAItQOeNdR9H3kT_ZT2SWuX4So3k/edit?usp=sharing) (you have to be logged in with your ULL account).
