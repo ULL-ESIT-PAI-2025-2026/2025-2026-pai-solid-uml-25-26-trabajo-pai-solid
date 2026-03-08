@@ -94,26 +94,7 @@ class Fish extends Animal implements Swimmable {
   }
 }
 
-/**
- * Eagle implements walking and flying behaviors.
- */
-class Eagle extends Animal implements Walkable, Flyable {
-  walk(): void {
-    console.log('Eagle walking');
-  }
-
-  fly(): void {
-    console.log('Eagle flying');
-  }
-
-  describe(): string {
-    return 'I am an eagle';
-  }
-}
-
-/**
- * Usage example.
- */
+/** Usage example. */
 function mainGoodISP(): void {
   const swimmers: Swimmable[] = [new Dog('Rex'), new Fish('Nemo')];
 

@@ -13,7 +13,7 @@
  * using different types of geometric figures.
  */
 
-/** @desc Represents a rectangle. */
+/** Represents a rectangle. */
 export class Rectangle {
   
   /**
@@ -88,7 +88,7 @@ function magicalArea(rectangle: Rectangle): number {
   return rectangle.getArea(); 
 }
 
-/** @desc Usage example */
+/** Usage example */
 function mainInvariantViolation() {
   const side: number = 2;
   console.log(magicalArea(new Rectangle(side, side))); // 20

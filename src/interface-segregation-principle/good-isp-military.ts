@@ -19,7 +19,6 @@
 interface Soldier {
   /**
    * Performs a patrol action.
-   * 
    * @param area - Area to patrol.
    */
   patrol(area: string): void;
@@ -37,14 +36,12 @@ interface Soldier {
 interface Officer extends Soldier {
   /**
    * Issues an order to a unit.
-   * 
    * @param order - Command to execute.
    */
   giveOrder(order: string): void;
 
   /**
    * Plans a military mission.
-   * 
    * @param missionName - Name of the mission.
    */
   planMission(missionName: string): void;
@@ -54,16 +51,12 @@ interface Officer extends Soldier {
  * Infantry class implementing basic soldier behaviour.
  */
 class Infantry implements Soldier {
-  /**
-   * Patrol implementation.
-   */
+  /** Patrol implementation. */
   patrol(area: string): void {
     console.log('Patrolling area: ' + area);
   }
 
-  /**
-   * Reports soldier status.
-   */
+  /** Reports soldier status. */
   reportStatus(): void {
     console.log('Infantry reporting status.');
   }
@@ -74,38 +67,28 @@ class Infantry implements Soldier {
  * Includes both soldier and command responsibilities.
  */
 class Captain implements Officer {
-  /**
-   * Patrol implementation.
-   */
+  /** Patrol implementation. */
   patrol(area: string): void {
     console.log('Captain supervising patrol in: ' + area);
   }
 
-  /**
-   * Reports officer status.
-   */
+  /** Reports officer status. */
   reportStatus(): void {
     console.log('Captain reporting operational status.');
   }
 
-  /**
-   * Issues an order.
-   */
+  /** Issues an order. */
   giveOrder(order: string): void {
     console.log('Order issued: ' + order);
   }
 
-  /**
-   * Plans a mission.
-   */
+  /** Plans a mission. */
   planMission(missionName: string): void {
     console.log('Planning mission: ' + missionName);
   }
 }
 
-/**
- * Usage example.
- */
+/** Usage example. */
 function mainMilitaryRoles(): void {
   const soldier: Soldier = new Infantry();
   const officer: Officer = new Captain();

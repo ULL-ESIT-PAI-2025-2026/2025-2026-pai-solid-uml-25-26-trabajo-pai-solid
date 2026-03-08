@@ -19,7 +19,7 @@
  * This class intentionally violates the SRP.
  */
 class StatisticsProcessor {
-  private data: number[] = [];
+  constructor(private data: number[] = []) { }
 
   /**
    * Loads the dataset.

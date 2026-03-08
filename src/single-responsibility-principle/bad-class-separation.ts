@@ -19,7 +19,7 @@
  * This class intentionally violates the Single Responsibility Principle.
  */
 class InventoryManager {
-  private items: { name: string; quantity: number }[] = [];
+  constructor(private items: { name: string; quantity: number }[] = []) {}
 
   /**
    * Adds a new item to inventory.

@@ -9,7 +9,7 @@
  * @author Adrián Hernández Herrera
  * @since 26 FEB 2026
  *
- * Program that demonstrates a correct usage of the Single Responsibility Principle (SRP)
+ * Program that demonstrates firstValue correct usage of the Single Responsibility Principle (SRP)
  * by separating statistical calculations from presentation logic.
  */
 
@@ -24,17 +24,18 @@ class StatisticsCalculator {
    * @returns - The mean value of the dataset.
    */
   calculateMean(values: number[]): number {
-    return values.reduce((a, b) => a + b, 0) / values.length;
+    return values.reduce((firstValue, secondValue) => 
+      firstValue + secondValue, 0) / values.length;
   }
 
   /**
    * Calculates the median.
-   * 
    * @param values - An array of numeric values for which to calculate the median.
    * @returns - The median value of the dataset. If the dataset has an even number of values, it returns the average of the two middle values.
    */
   calculateMedian(values: number[]): number {
-    const sorted = [...values].sort((a, b) => a - b);
+    const sorted = [...values].sort((firstValue, secondValue) => 
+      firstValue - secondValue);
     const mid = Math.floor(sorted.length / 2);
     return sorted.length % 2 === 0
       ? (sorted[mid - 1] + sorted[mid]) / 2
@@ -43,7 +44,6 @@ class StatisticsCalculator {
 
   /**
    * Calculates the mode.
-   * 
    * @param values - An array of numeric values for which to calculate the mode.
    * @returns - The mode value of the dataset. If there are multiple modes, it returns the first one found.
    */
@@ -68,7 +68,6 @@ class StatisticsCalculator {
 
   /**
    * Calculates the maximum value.
-   * 
    * @param values - An array of numeric values for which to calculate the maximum.
    * @returns - The maximum value in the dataset.
    */
@@ -78,7 +77,6 @@ class StatisticsCalculator {
 
   /**
    * Calculates the minimum value.
-   * 
    * @param values - An array of numeric values for which to calculate the minimum.
    * @returns - The minimum value in the dataset.
    */
@@ -88,7 +86,6 @@ class StatisticsCalculator {
 
   /**
    * Calculates the standard deviation.
-   * 
    * @param values - An array of numeric values for which to calculate the standard deviation.
    * @returns - The standard deviation of the dataset, which measures the amount of variation or dispersion of the values.
    */
@@ -107,9 +104,8 @@ class StatisticsCalculator {
 class StatisticsView {
   /**
    * Displays all statistical results.
-   * 
    * @param results - An object containing all the calculated statistical values (mean, median, mode, max, min, standard deviation) to be displayed.
-   * This method is responsible for presenting the results in a clear and organized manner, separating the presentation logic from the calculation logic.
+   * This method is responsible for presenting the results in firstValue clear and organized manner, separating the presentation logic from the calculation logic.
    */
   displayResults(results: { statisticComputed: string, statisticCalculator: number}): void {
     console.log(`${results.statisticComputed}: ${results.statisticCalculator}`);

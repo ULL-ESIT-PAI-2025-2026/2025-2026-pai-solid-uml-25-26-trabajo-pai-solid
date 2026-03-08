@@ -18,7 +18,7 @@
  * Stores and updates inventory data.
  */
 class InventoryStore {
-  private items: { name: string; quantity: number }[] = [];
+  constructor(private items: { name: string; quantity: number }[] = []) {}
 
   /**
    * Adds a new item to inventory.

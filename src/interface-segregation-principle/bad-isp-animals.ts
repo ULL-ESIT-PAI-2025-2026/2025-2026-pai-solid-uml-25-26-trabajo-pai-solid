@@ -19,19 +19,13 @@
  * all movement methods regardless of its capabilities.
  */
 abstract class Animal {
-  /**
-   * Forces all animals to walk.
-   */
+  /** Forces all animals to walk. */
   abstract walk(): void;
 
-  /**
-   * Forces all animals to fly.
-   */
+  /** Forces all animals to fly. */
   abstract fly(): void;
 
-  /**
-   * Forces all animals to swim.
-   */
+  /** Forces all animals to swim. */
   abstract swim(): void;
 }
 
@@ -85,9 +79,7 @@ class Fish extends Animal {
   }
 }
 
-/**
- * Usage example.
- */
+/** Usage example. */
 function mainBadISP(): void {
   const animals: Animal[] = [new Dog(), new Fish()];
 

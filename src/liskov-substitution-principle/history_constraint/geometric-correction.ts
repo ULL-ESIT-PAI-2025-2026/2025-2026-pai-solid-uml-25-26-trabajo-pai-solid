@@ -20,7 +20,6 @@
 interface Shape {
   /**
    * Calculates the area of the shape.
-   * 
    * @returns The area of the Shape.
    */
   getArea(): number;
@@ -28,7 +27,6 @@ interface Shape {
 
 /**
  * Represents a rectangle.
- * 
  * Now it only implements the Shape interface without forcing
  * its invariant rules onto other classes.
  */
@@ -52,7 +50,6 @@ class Rectangle implements Shape {
 
   /**
    * A standard setter for the attribute `height`.
-   * 
    * @param height Height of the rectangle.
    */
   setHeight(height: number): void {
@@ -61,7 +58,6 @@ class Rectangle implements Shape {
 
   /**
    * Calculates the area of the Rectangle.
-   * 
    * @returns The area of the Rectangle.
    */
   getArea(): number {
@@ -78,14 +74,12 @@ class Rectangle implements Shape {
 class Square implements Shape {
   /**
    * We only need one side to determine the dimensions of a square.
-   * 
    * @param side Length of the Square's side.
    */
   constructor(private side: number) {}
 
   /**
    * A standard setter for the side of the Square.
-   * 
    * @param side Length of the Square's side.
    */
   setSide(side: number): void {
@@ -94,7 +88,6 @@ class Square implements Shape {
 
   /**
    * Calculates the area of the Square.
-   * 
    * @returns The area of the Square.
    */
   getArea(): number {

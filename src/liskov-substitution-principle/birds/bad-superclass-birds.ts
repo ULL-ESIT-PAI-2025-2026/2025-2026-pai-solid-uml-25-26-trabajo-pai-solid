@@ -21,7 +21,7 @@
  */
 abstract class Bird {
   /**
-   * @desc Return the name of the bird species.
+   * Return the name of the bird species.
    * 
    * This method was added for `research purposes`.
    */
@@ -43,7 +43,7 @@ abstract class Bird {
  */
 class Canary extends Bird {
   /**
-   * @desc Return the name of the bird species (Canary).
+   * Return the name of the bird species (Canary).
    */ 
   override birdName(): string {
     return 'Canary';
@@ -67,7 +67,7 @@ class Canary extends Bird {
  */
 class Penguin extends Bird {
   /**
-   * @desc Return the name of the bird species (Penguin).
+   * Return the name of the bird species (Penguin).
    */ 
   override birdName(): string {
     return 'Penguin';
